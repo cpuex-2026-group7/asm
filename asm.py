@@ -48,8 +48,9 @@ def main():
     src = sys.argv[1]
     dst = "" if len(sys.argv) < 3 else sys.argv[2]
     if dst == "":
-        dst = src.split(".")[0] + ".bin"
-    
+        sp = src.rsplit("/", 1)
+        name = sp[-1].rsplit(".", 1)[0]
+        dst = f"{sp[0]}/{name}.bin" if len(sp) > 1 else f"{name}.bin"
     # build isa meta
     print("analzing isa...")
     isa_meta = {}

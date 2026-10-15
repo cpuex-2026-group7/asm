@@ -4,7 +4,7 @@ import re
 # ======== ISA ========
 isa = [
     # ALU / NONE
-    {"opcode": "0000000", "expr": "halt"},
+    {"opcode": "0000000", "expr": "nop"},
     {"opcode": "0001100", "expr": "beq rs1, rs2, imm"},
     {"opcode": "0001101", "expr": "bne rs1, rs2, imm"},
     {"opcode": "0001110", "expr": "blt rs1, rs2, imm"},
@@ -36,6 +36,8 @@ isa = [
     {"opcode": "1101101", "expr": "fsub.s rdf, rs1f, rs2f"},
     {"opcode": "1101110", "expr": "fmul.s rdf, rs1f, rs2f"},
     {"opcode": "1101111", "expr": "fdiv.s rdf, rs1f, rs2f"},
+    # OTHER
+    {"opcode": "1111111", "expr": "halt"}
 ]
 imm_pc_relative = ["beq", "bne", "blt", "bge", "jal"]
 

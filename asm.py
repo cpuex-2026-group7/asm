@@ -22,20 +22,20 @@ isa = [
     {"opcode": "0111100", "expr": "sw rs2, imm(rs1)"},
     {"opcode": "0111101", "expr": "fsw rs2f, imm(rs1)"},
     # FPU / WI
-    {"opcode": "1011000", "expr": "fcvt.w.s rd, rs1f"},
-    {"opcode": "1011100", "expr": "feq.s rd, rs1f, rs2f"},
-    {"opcode": "1011101", "expr": "flt.s rd, rs1f, rs2f"},
+    {"opcode": "1011000", "expr": "ftoi rd, rs1f"},
+    {"opcode": "1011100", "expr": "feq rd, rs1f, rs2f"},
+    {"opcode": "1011101", "expr": "flt rd, rs1f, rs2f"},
     # FPU / WF
-    {"opcode": "1100000", "expr": "fli.s rdf, imm"},
-    {"opcode": "1100100", "expr": "flim.s rdf, imm"},
-    {"opcode": "1101000", "expr": "fcvt.s.w rdf, rs1"},
-    {"opcode": "1101001", "expr": "fsqrt.s rdf, rs1f"},
-    {"opcode": "1101010", "expr": "fneg.s rdf, rs1f"},
-    {"opcode": "1101011", "expr": "fabs.s rdf, rs1f"},
-    {"opcode": "1101100", "expr": "fadd.s rdf, rs1f, rs2f"},
-    {"opcode": "1101101", "expr": "fsub.s rdf, rs1f, rs2f"},
-    {"opcode": "1101110", "expr": "fmul.s rdf, rs1f, rs2f"},
-    {"opcode": "1101111", "expr": "fdiv.s rdf, rs1f, rs2f"},
+    {"opcode": "1100000", "expr": "fli rdf, imm"},
+    {"opcode": "1100100", "expr": "flhi rdf, imm"},
+    {"opcode": "1101000", "expr": "itof rdf, rs1"},
+    {"opcode": "1101001", "expr": "fmv rdf, rs1f"},
+    {"opcode": "1101010", "expr": "fsqrt rdf, rs1f"},
+    {"opcode": "1101011", "expr": "fabs rdf, rs1f"},
+    {"opcode": "1101100", "expr": "fadd rdf, rs1f, rs2f"},
+    {"opcode": "1101101", "expr": "fsub rdf, rs1f, rs2f"},
+    {"opcode": "1101110", "expr": "fmul rdf, rs1f, rs2f"},
+    {"opcode": "1101111", "expr": "fdiv rdf, rs1f, rs2f"},
     # OTHER
     {"opcode": "1111111", "expr": "halt"}
 ]
